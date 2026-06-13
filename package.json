@@ -9,6 +9,8 @@
     "vscode-start-webview": "VITE_VARIANT=vscode vite --port=5177",
     "start-native": "npx @neutralinojs/neu run -- --window-enable-inspector",
     "start-native-webapp": "VITE_VARIANT=native vite",
+    "start-tauri": "npx tauri dev",
+    "start-tauri-webapp": "VITE_VARIANT=tauri vite",
     "build": "tsc -b && VITE_VARIANT=web vite build",
     "build-pages": "tsc -b && VITE_VARIANT=web vite build --base=/lo-fi-mockups/",
     "typecheck": "tsc --noEmit --watch --project tsconfig.app.json",
@@ -19,6 +21,7 @@
     "build-webjar": "tsc -b && VITE_VARIANT=xwiki vite build --base=./ && rm -rf xwiki/src/main/webjar && mkdir -p xwiki/src/main/webjar && cp -r dist/* xwiki/src/main/webjar/",
     "native-build": "npx @neutralinojs/neu build --release",
     "native-build-webapp": "tsc -b && VITE_VARIANT=native vite build",
+    "tauri-build-webapp": "tsc -b && VITE_VARIANT=tauri vite build",
     "native-download": "npx @neutralinojs/neu update"
   },
   "dependencies": {
@@ -31,6 +34,10 @@
     "@popperjs/core": "^2.11.8",
     "@ruediste/html-to-image": "1.13.3",
     "@ruediste/png-transformer": "^0.0.4",
+    "@tauri-apps/plugin-cli": "^2.4.1",
+    "@tauri-apps/plugin-dialog": "^2.7.1",
+    "@tauri-apps/plugin-fs": "^2.5.1",
+    "@tauri-apps/plugin-log": "^2.8.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "classnames": "^2.5.1",

@@ -6,8 +6,8 @@
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",
-    "beforeDevCommand": "npm run start-native-webapp",
-    "beforeBuildCommand": "npm run build"
+    "beforeDevCommand": "npm run start-tauri-webapp",
+    "beforeBuildCommand": "npm run tauri-build-webapp"
   },
   "app": {
     "windows": [
@@ -21,6 +21,13 @@
     ],
     "security": {
       "csp": null
+    }
+  },
+  "plugins": {
+    "cli": {
+      "args": [
+        { "name": "file", "index": 1, "takesValue": true }
+      ]
     }
   },
   "bundle": {
