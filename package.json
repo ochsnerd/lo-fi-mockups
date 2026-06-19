@@ -9,8 +9,10 @@
     "vscode-start-webview": "VITE_VARIANT=vscode vite --port=5177",
     "start-native": "npx @neutralinojs/neu run -- --window-enable-inspector",
     "start-native-webapp": "VITE_VARIANT=native vite",
+    "tauri": "npx tauri",
     "start-tauri": "npx tauri dev",
     "start-tauri-webapp": "VITE_VARIANT=tauri vite",
+    "tauri-build-webapp": "tsc -b && VITE_VARIANT=tauri vite build",
     "build": "tsc -b && VITE_VARIANT=web vite build",
     "build-pages": "tsc -b && VITE_VARIANT=web vite build --base=/lo-fi-mockups/",
     "typecheck": "tsc --noEmit --watch --project tsconfig.app.json",
@@ -21,7 +23,6 @@
     "build-webjar": "tsc -b && VITE_VARIANT=xwiki vite build --base=./ && rm -rf xwiki/src/main/webjar && mkdir -p xwiki/src/main/webjar && cp -r dist/* xwiki/src/main/webjar/",
     "native-build": "npx @neutralinojs/neu build --release",
     "native-build-webapp": "tsc -b && VITE_VARIANT=native vite build",
-    "tauri-build-webapp": "tsc -b && VITE_VARIANT=tauri vite build",
     "native-download": "npx @neutralinojs/neu update"
   },
   "dependencies": {
