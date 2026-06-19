@@ -159,3 +159,16 @@ For middle snapping, elements provide a snap box through their middle, which exp
 ```
 
 ```
+
+## Nix
+
+The file `flake.nix` allows 3 things:
+- `nix develop` opens a shell with all dependencies installed to develop the app
+- `nix build` compiles an executable of the app
+- `nix run` compiles and runs the app
+
+## Tauri
+
+[Tauri](https://tauri.app/) allows bundling web-app as binaries for desktop and mobile.
+The required sourcecode lives in src-tauri, including a seperate README.md.
+
