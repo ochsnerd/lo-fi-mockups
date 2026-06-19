@@ -11,3 +11,5 @@ and might complain about missing system dependencies
 
 ```npx tauri add <...>```
 Adds a tauri 'plugin' (eg fs), handles package.json, cargo.toml, and other places.
+
+Most important file: tauri.conf.json
