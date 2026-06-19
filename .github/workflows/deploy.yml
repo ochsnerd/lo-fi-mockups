@@ -20,19 +20,19 @@ jobs:
       - name: Run Docker Build
         run: docker buildx build --cache-from type=gha --cache-to type=gha,mode=max . -o dist
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/pages
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./dist/pages
 
-      - name: Create release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release delete "latest" --yes || true
-          gh release create "latest" \
-              --latest \
-              --title="Build $GITHUB_RUN_NUMBER" \
-              dist/native/*.zip \
-              dist/xwiki/*.jar
+      # - name: Create release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     gh release delete "latest" --yes || true
+      #     gh release create "latest" \
+      #         --latest \
+      #         --title="Build $GITHUB_RUN_NUMBER" \
+      #         dist/native/*.zip \
+      #         dist/xwiki/*.jar
