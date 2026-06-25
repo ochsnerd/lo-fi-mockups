@@ -6,7 +6,7 @@ interface ViteTypeOptions {
 }
 
 interface ImportMetaEnv {
-  readonly VITE_VARIANT: "native" | "web" | "xwiki" | "vscode";
+  readonly VITE_VARIANT: "native" | "web" | "xwiki" | "vscode" | "tauri";
 }
 
 interface ImportMeta {
